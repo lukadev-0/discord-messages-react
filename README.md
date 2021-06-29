@@ -62,3 +62,15 @@ export default function MyChat() {
 			</Background>
 }
 ```
+
+# Problems
+
+## My font isn't the same as the picture!
+Don't forget to include this in your HTML: 
+
+
+```html
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;600&display=swap" rel="stylesheet">
+```
+

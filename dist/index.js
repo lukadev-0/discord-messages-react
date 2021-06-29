@@ -1,11 +1,12 @@
+import { Avatar } from './Avatar';
 import { Background } from './Background';
-import { ThemeProvider } from 'styled-components';
-import { Message } from './Message';
-import { Avatar, MessageAvatar } from './Avatar';
-import { Content, BoldContent, MessageContent, MessageSentAt } from './Content';
+import { Content, BoldContent, MessageContent, MessageAuthorName, MessageBotTag, MessageSentAt } from './Content';
 import { Link } from './Link';
-export { Background, ThemeProvider, Message, Avatar, Content, BoldContent, MessageContent, MessageAvatar, Link, MessageSentAt };
-export * from './Components';
+import { Message } from './Message';
+import { VerifiedBotTag } from './VerifiedBotTag';
+import { ThemeProvider } from 'styled-components';
+import { Emoji, LinkButttonIcon, Button } from './Components';
+export { Avatar, Background, Content, BoldContent, MessageContent, MessageAuthorName, MessageBotTag, MessageSentAt, Link, Message, VerifiedBotTag, ThemeProvider, Emoji, LinkButttonIcon, Button };
 ThemeProvider.defaultProps = {
   theme: {
     mode: 'dark',
