@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BoldContent } from '../../Content'
 import Link from './Link'
-import Emoji from '../Emoji'
+import Emoji from '../../Emoji'
 
 type ButtonType = 'primary' | 'secondary' | 'link' | 'success' | 'danger'
 
@@ -45,6 +45,14 @@ const StyledButton = styled.button<StyledButtonProps>`
 	display: flex;
 	align-items: center;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+	transition: background 0.17s ease, color 0.17s ease;
+
+	:hover {
+		${(props) =>
+			props.buttonType === 'primary'
+				? 'background: hsl(235, 66.7%, 58.8%)'
+				: ''}
+	}
 `
 
 const StyledLink = styled(Link)`

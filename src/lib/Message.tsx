@@ -8,6 +8,7 @@ import {
 	MessageSentAt,
 } from './Content'
 import { VerifiedBotTag } from './VerifiedBotTag'
+import defaultParseDate from './defaultParseDate'
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -55,17 +56,7 @@ export const Message: React.FC<MessageProps> = ({
 	authorName,
 	components,
 	at,
-	parseDate = (date: Date) => {
-		const isToday = new Date().getDate() === date.getDate()
-		const isYesterday = new Date().getDate() - date.getDate() === 1
-		const properDate =
-			isToday || isYesterday
-				? `${
-						isToday ? 'Today' : 'Yesterday'
-				  } at ${date.getHours()}:${date.getMinutes()}`
-				: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
-		return properDate
-	},
+	parseDate = defaultParseDate,
 	roleColor,
 	bot,
 }) => {

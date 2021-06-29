@@ -6,7 +6,7 @@ export const Content = styled.div.withConfig({
 export const MessageContent = styled(Content).withConfig({
   displayName: "Content__MessageContent",
   componentId: "sc-18w2qqe-1"
-})(["margin-left:16px;"]);
+})(["margin-left:13px;"]);
 export const BoldContent = styled(Content).withConfig({
   displayName: "Content__BoldContent",
   componentId: "sc-18w2qqe-2"
@@ -22,3 +22,19 @@ export const MessageBotTag = styled(BoldContent).withConfig({
   displayName: "Content__MessageBotTag",
   componentId: "sc-18w2qqe-4"
 })(["background:hsl(235,85.6%,64.7%);border-radius:0.1875rem;padding:0 0.275rem;font-size:0.625rem;margin-left:8px;"]);
+export const EmbedTitle = styled(BoldContent).withConfig({
+  displayName: "Content__EmbedTitle",
+  componentId: "sc-18w2qqe-5"
+})(["margin:0;"]);
+export const AuthorContent = styled(BoldContent).withConfig({
+  displayName: "Content__AuthorContent",
+  componentId: "sc-18w2qqe-6"
+})(["font-size:0.875rem;"]);
+export const FooterContent = styled(Content).withConfig({
+  displayName: "Content__FooterContent",
+  componentId: "sc-18w2qqe-7"
+})(["font-size:0.75rem;"]);
+export const EmbedContent = styled(Content).withConfig({
+  displayName: "Content__EmbedContent",
+  componentId: "sc-18w2qqe-8"
+})(["font-size:0.95rem;"]);

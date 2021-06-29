@@ -1,6 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Background, ThemeProvider, Message, Button } from './lib'
+import {
+	Background,
+	ThemeProvider,
+	Message,
+	Button,
+	Embed,
+	Mention,
+} from './lib'
 
 render(
 	<React.StrictMode>
@@ -55,6 +62,58 @@ render(
 				>
 					Welcome to this wonderful server!
 				</Message>
+				<Message
+					avatar="blurple"
+					authorName="Someone"
+					at={new Date(Date.now())}
+				>
+					!profile <Mention>@daimond113</Mention>
+				</Message>
+				<Message
+					at={new Date(Date.now())}
+					avatar="grey"
+					authorName="Botty the bot"
+					bot={{ verified: true, label: 'BOTTY' }}
+					components={[
+						[
+							<Embed
+								title="daimond113's information"
+								embedColour="#FFF"
+								author={{
+									name: "daimond113's code hangout",
+									icon: 'https://cdn.discordapp.com/icons/799341812686127134/3175a94805b36ae4edc834578ca06c3e',
+									url: 'https://discord.gg/hTanCT5JMp',
+								}}
+								url="daimond113.com"
+								footer={{
+									text: 'Requested by Someone',
+									icon: 'https://cdn.discordapp.com/embed/avatars/0.png',
+								}}
+								timestamp={Date.now()}
+								thumbnail="https://avatars.githubusercontent.com/u/72147841?v=4"
+								image="https://pbs.twimg.com/profile_banners/1358033505628938245/1617267075/600x200"
+								fields={[
+									{
+										name: 'Status',
+										value: 'Member',
+										inline: true,
+									},
+									{
+										name: 'Permissions',
+										value: 'Admin',
+										inline: true,
+									},
+									{
+										name: 'Money',
+										value: '1000000$',
+									},
+								]}
+							>
+								Here!
+							</Embed>,
+						],
+					]}
+				></Message>
 			</Background>
 		</ThemeProvider>
 	</React.StrictMode>,

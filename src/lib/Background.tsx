@@ -7,4 +7,8 @@ export const Background = styled.div`
 	border-radius: 4px;
 	border: 4px solid
 		${(props) => (props.theme.mode === 'dark' ? '#2f3136' : '#f2f3f5')};
+	overflow: auto;
+	> * {
+		margin-left: 10px;
+	}
 `

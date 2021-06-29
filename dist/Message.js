@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { MessageAvatar } from './Avatar';
 import { MessageBotTag, MessageAuthorName, MessageContent, MessageSentAt } from './Content';
 import { VerifiedBotTag } from './VerifiedBotTag';
+import defaultParseDate from './defaultParseDate';
 const Container = styled.div.withConfig({
   displayName: "Message__Container",
   componentId: "sc-1akdsde-0"
@@ -36,12 +37,7 @@ export const Message = ({
   authorName,
   components,
   at,
-  parseDate = date => {
-    const isToday = new Date().getDate() === date.getDate();
-    const isYesterday = new Date().getDate() - date.getDate() === 1;
-    const properDate = isToday || isYesterday ? `${isToday ? 'Today' : 'Yesterday'} at ${date.getHours()}:${date.getMinutes()}` : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-    return properDate;
-  },
+  parseDate = defaultParseDate,
   roleColor,
   bot
 }) => {

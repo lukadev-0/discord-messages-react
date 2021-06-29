@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BoldContent } from '../../Content';
 import Link from './Link';
-import Emoji from '../Emoji';
+import Emoji from '../../Emoji';
 var Colours;
 
 (function (Colours) {
@@ -19,10 +19,10 @@ var Colours;
 const StyledButton = styled.button.withConfig({
   displayName: "Button__StyledButton",
   componentId: "rdj2y6-0"
-})(["margin:4px 8px 4px 0;min-width:60px;min-height:32px;opacity:", ";background:", ";border-radius:3px;border:none;display:flex;align-items:center;cursor:", ";"], props => props.disabled ? '.5' : '1', props => {
+})(["margin:4px 8px 4px 0;min-width:60px;min-height:32px;opacity:", ";background:", ";border-radius:3px;border:none;display:flex;align-items:center;cursor:", ";transition:background 0.17s ease,color 0.17s ease;:hover{", "}"], props => props.disabled ? '.5' : '1', props => {
   const formattedColour = props.buttonType === 'link' || props.buttonType === 'secondary' ? 'gray' : props.buttonType;
   return props.theme.mode === 'dark' ? Colours[`dark_${formattedColour}`] : Colours[`white_${formattedColour}`];
-}, props => props.disabled ? 'not-allowed' : 'pointer');
+}, props => props.disabled ? 'not-allowed' : 'pointer', props => props.buttonType === 'primary' ? 'background: hsl(235, 66.7%, 58.8%)' : '');
 const StyledLink = styled(Link).withConfig({
   displayName: "Button__StyledLink",
   componentId: "rdj2y6-1"

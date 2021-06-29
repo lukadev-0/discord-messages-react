@@ -5,6 +5,7 @@ export const Link = styled.a`
 		props.theme.mode === 'dark'
 			? 'hsl(197, 100%, 47.8%)'
 			: 'hsl(212, 100%, 43.9%)'};
+	cursor: pointer;
 	:link,
 	:visited {
 		text-decoration: none;
@@ -14,4 +15,8 @@ export const Link = styled.a`
 	:active {
 		text-decoration: underline;
 	}
+`
+
+export const AuthorLink = styled(Link)`
+	color: inherit;
 `

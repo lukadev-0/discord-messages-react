@@ -9,7 +9,7 @@ export const Content = styled.div`
 `
 
 export const MessageContent = styled(Content)`
-	margin-left: 16px;
+	margin-left: 13px;
 `
 
 export const BoldContent = styled(Content)`
@@ -32,4 +32,19 @@ export const MessageBotTag = styled(BoldContent)`
 	padding: 0 0.275rem;
 	font-size: 0.625rem;
 	margin-left: 8px;
+`
+
+export const EmbedTitle = styled(BoldContent)`
+	margin: 0;
+`
+
+export const AuthorContent = styled(BoldContent)`
+	font-size: 0.875rem;
+`
+
+export const FooterContent = styled(Content)`
+	font-size: 0.75rem;
+`
+export const EmbedContent = styled(Content)`
+	font-size: 0.95rem;
 `
