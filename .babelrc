@@ -1,0 +1,10 @@
+{
+	"presets": [
+		["@babel/preset-react", { "absoluteRuntime": false }],
+		["@babel/preset-typescript", { "isTSX": true, "allExtensions": true }]
+	],
+	"plugins": [
+		"babel-plugin-styled-components",
+		"@babel/plugin-transform-typescript"
+	]
+}

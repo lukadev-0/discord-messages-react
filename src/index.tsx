@@ -1,15 +1,11 @@
-# discord-messages-react
-Simulate Discord chats in React
+import React from 'react'
+import { render } from 'react-dom'
+import { Background, ThemeProvider, Message, Button } from './lib'
 
-![Example of components](./example.png)
-
-## Using this package is very simple. Here's an example!
-
-```tsx
-import { Background, Message, Button } from 'discord-messages-react'
-
-export default function MyChat() {
-    return <Background>
+render(
+	<React.StrictMode>
+		<ThemeProvider theme={{ mode: 'dark' }}>
+			<Background>
 				<Message
 					avatar="blurple"
 					authorName="Someone"
@@ -60,5 +56,7 @@ export default function MyChat() {
 					Welcome to this wonderful server!
 				</Message>
 			</Background>
-}
-```
+		</ThemeProvider>
+	</React.StrictMode>,
+	document.getElementById('root')
+)
