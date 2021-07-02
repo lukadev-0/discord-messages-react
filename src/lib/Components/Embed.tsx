@@ -109,7 +109,7 @@ export const Embed: React.FC<EmbedProps> = (props) => {
 			)}
 			<FlexContainer>
 				<div>
-					<EmbedTitle as="h3">{url ? <Link>{title}</Link> : title}</EmbedTitle>
+					<EmbedTitle as="h3">{url ? <Link href={url}>{title}</Link> : title}</EmbedTitle>
 					<EmbedContent>{children}</EmbedContent>
 				</div>
 				{thumbnail && <EmbedThumbnail src={thumbnail} />}
